@@ -3,7 +3,7 @@
   }
 
 body{
-    margin:0;
+    margin: 100px;
     background-color: #FFF7D4;
     font-family: 'DM Sans', sans-serif;
     color: #4C3D3D;
@@ -12,7 +12,7 @@ body{
 /*    font-family: 'Alex Brush', cursive; */
 
 .bakeryBlock{
-    display: flex;
+    /*display: flex; */
     margin-bottom: 16px;
     padding: 16px;
     flex-direction: column;
@@ -43,4 +43,10 @@ body{
 
 #advertising{
     align-items: center;
+}
+.filterDiv {
+    display: none;
+}
+.show {
+    display: block;
 }
