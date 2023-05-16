@@ -11,10 +11,8 @@
   }
 
 body{
-
     margin:0;
     background-color: var(--primary-color);
-}
     font-family: 'DM Sans', sans-serif;
     color: var(--dark);
 }
