@@ -21,15 +21,10 @@ body{
 
 
 nav {
-    background: linear-gradient( #FFD95A,#ffd95ab9,#FFD95A)
+    background: linear-gradient( #FFD95A,#ffd95ab9,#FFD95A);
+    
   }
-  /* ul{
-    list-style-type: none;
-  background-color: #a306b6;
-  display: flex;
-  margin: -2%;
-  padding: 2%;
-} */
+
   
   nav ul {
     list-style: none;
