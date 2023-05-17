@@ -17,7 +17,7 @@
 
 
         <nav id="navbar">
-            <ul>
+            <ul class="content">
                 <li><img id="logo" src="Images/Logo-Wild-Bakery.png"> </li>
                 <li href="#" id="openBtn">
                     <span class="burger-icon">
@@ -31,28 +31,46 @@
         <div id="mySidenav" class="sidenav">
             <a id="closeBtn" href="#" class="close">&times;</a>
             <ul>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">Nos services</a></li>
-                <li><a href="#">Témoignages</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">A propos de nous </a></li>
+                <li><a href="#">Commander</a></li>
+                <li><a href="#">Contactez-nous</a></li>
+                <li><a href="#">Top 3</a></li>
             </ul>
         </div>
 
-
-        <div class="button-container">
-            <button class="btn active" onclick="filterSelection('caterer')">Traiteur</button>
+        <div class="dropdown">
+            <button onclick="myDropDownMenu()" class="dropbtn">Recherchez</button>
+            <div id="myDropdown" class="dropdown-content">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                <a href="#about" class="active" onclick="filterSelection('all')">Reset</a>
+                <a href="#base" onclick="filterSelection('caterer')">Caterer</a>
+                <a href="#blog" onclick="filterSelection('onlineOrder')">Online Order</a>
+                <a href="#contact" onclick="filterSelection('locationNord')">Localisation Petit Pain</a>
+                <a href="#contact" onclick="filterSelection('locationCentre')">Localisation Pain au chocolat</a>
+                <a href="#contact" onclick="filterSelection('locationSud')">Localisation Chocolatine</a>
+                <a href="#custom" onclick="filterSelection('priceCroissant')">Prix <i class="fa-solid fa-arrow-down">
+                    </i></a>
+                <a href="#support" onclick="filterSelection('priceDecroissant')">Prix <i class="fa-solid fa-arrow-up">
+                    </i></a>
+            </div>
+        </div>
+        <!--<div class="button-container">
+            <button class="btn active" onclick="filterSelection('all')">Reset</button>
+            <button class="btn" onclick="filterSelection('caterer')">Traiteur</button>
             <button class="btn" onclick="filterSelection('onlineOrder')">Commande en ligne</button>
-            <button class="btn" onclick="filterSelection('price')">Prix <i
-                    class="fa-regular fa-arrow-down"></i></button>
+            <button class="btn" onclick="filterSelection('price')">Prix <i class="fa-solid fa-arrow-down">
+                </i></button>
             <button class="btn" onclick="filterSelection('price+')">Prix <i class="fa-solid fa-arrow-up"></i></button>
             <button class="btn" onclick="filterSelection('location')">Localisation</button>
         </div>
-        <div class="container">Filtres</div>
+
+        <div class="container">Filtres</div>-->
        
         <div class="main">
 
         <!--Auguste & Ferdinand bakery-->
-        <div class="bakeryBlock filterDiv caterer onlineOrder price location" id="popupAuguste">
+        <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant locationNord all" id="popupAuguste">
+
             <img class="pictureBakery" src="Images/bakery-Auguste2.jpg" alt="Boulangerie Auguste & Ferdinand" />
             <div class="bakeryName" filter-caterer="Oui" filteronlineorder="Oui" filter-price="€"
                 filter-location="Petit Pain">
@@ -64,7 +82,7 @@
         </div>
 
         <!--La Toque Cuivrée bakery-->
-        <div class="bakeryBlock filterDiv caterer onlineOrder  location">
+        <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant locationSud all">
             <img class="pictureBakery" src="Images/bakery-la-toque.jpg" alt="Boulangerie La Toque Cuivrée" />
             <div class="bakeryName" filter-caterer="Non" filter-cnline-order="Non" filter-price="€€€"
                 filter-location="Chocolatine">
@@ -76,12 +94,10 @@
         </div>
 
         <!--Publicité-->
-        <div >
-        <img id="advertising" src="Images/Pub.jpg" alt="Publicité pour Chocolatine-Clicker">
-        </div>
+
 
         <!--Eric Kayser-->
-        <div class="bakeryBlock filterDiv caterer onlineOrder  location">
+        <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant  locationCentre all">
             <img class="pictureBakery" src="Images/bakery-X.jpg" alt="Boulangerie Eric Kayser" />
             <div class="bakeryName" filter-caterer="Non" filter-online-order="Oui" filter-price="€€"
                 filter-location="Pain au chocolat">
@@ -92,7 +108,10 @@
             <img class="pictureStars" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
         </div>
 
-         </div>
+
+        <div>
+            <img id="advertising" src="Images/Pub.jpg" alt="Publicité pour Chocolatine-Clicker">
+        </div>
 
         <!--Popup windows-->
         <div id="popupBakery1">
