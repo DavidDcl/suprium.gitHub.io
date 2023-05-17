@@ -1,15 +1,23 @@
 /* Creation of variables for the colors */
 :root {
-    --primary-color: #FFF7D4;
-    --secondary-color: #FFD95A;
-    --third-color: #C07F00;
-    --dark: #4C3D3D;
+    --primary-color: rgba(255, 247, 212, 1);
+    --primary-color:rgba(235, 227, 192, 1);
+    --secondary-color:rgba(255, 217, 90, 1);
+    --secondary-color-var:rgba(235, 197, 70, 1);
+    --third-color: rgba(192, 127, 0, 1);
+    --third-color-var:rgba(152, 87, 0, 1);
+    --dark: rgba(76, 61, 61, 1);
+    --dark-var :rgba(56, 41, 41, 1);
 }
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-
+  html, body {
+    height: 100%;
+  }
 body{
     margin:0;
     background-color: var(--primary-color);
@@ -21,8 +29,7 @@ body{
 
 
 nav {
-    background: linear-gradient( #FFD95A,#ffd95ab9,#FFD95A);
-    
+    background: linear-gradient(var(--secondary-color),var(--secondary-color-var),var(--secondary-color)); 
   }
 
   
@@ -31,65 +38,68 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
-    padding: 0 .5rem;
-   
-    
+    padding: 0.2rem;
   }
-  nav ul li {
-    margin:1%;  
-  }
+ 
   .burger-icon span {
     display: flex;
     width: 2.5em;
     height: 0.6em;
-    margin: 0.3em 0;
-    background: linear-gradient(#4C3D3D,#4c3d3d86);
-    border: 2px solid black;
+    margin: 0.2em;
+    background: linear-gradient(var(--dark),var(--dark-var),var(--dark)); 
+    border: 1px solid black;
     border-radius: 30px;
-    cursor: pointer;
   }
-
-
   #logo {
-    width: 10%;
+    width: 23%;
+    margin-top:0.2em;
   }
 
   .sidenav {
-    height: 100%;
-    width: 250px;
+    height: 30%;
+    width: 7em;
     position: fixed;
     z-index: 1;
-    top: 0;
-    left: -250px;
-    background-color: #e8e8e8;
+    top: 0; 
+    right: -20em;
+    background: linear-gradient(var(--third-color),var(--third-color-var),var(--third-color)); 
     padding-top: 60px;
-    transition: left 0.5s ease;
+    transition: right 0.5s ease;
+    
   }
   
   /* Sidenav menu links */
   .sidenav a {
-    /* padding: 8px 8px 8px 32px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
     text-decoration: none;
-    font-size: 25px;
-    color: #818181; */
-    display: block;
-    /* transition: 0.3s; */
+    font-size: 0.5em;
+    align-items: space-between;
+   
+    
+    /* padding: 8px 8px 8px 32px;
+    
+   
+    color: #818181; 
+     display: block; 
+     transition: 0.3s; */
   }
   
   /* .sidenav a:hover {
     color: #111;
   }
    */
-  /* .sidenav ul {
+  .sidenav ul {
     list-style-type: none;
+    justify-content: space-between;
+    align-items: space-between;
     padding: 0;
     margin: 0;
   }
-   */
+  
   /* Active class */
   .sidenav.active {
-    left: 0;
+    right: 0;
   }
   
   /* Close btn */
@@ -101,9 +111,10 @@ nav {
   }
 
   .sticky {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
+    z-index: 1;
   }
 .bakeryBlock{
     display: flex;
