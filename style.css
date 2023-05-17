@@ -106,7 +106,7 @@ nav {
     width: 100%;
   }
 .bakeryBlock{
-    /*display: flex; */
+    display: flex;
     margin-bottom: 16px;
     padding: 16px;
     flex-direction: column;
