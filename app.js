@@ -12,10 +12,10 @@ window.onscroll = function () {
 };
 
 // Get the navbar
-var navbar = document.getElementById("navbar");
+let navbar = document.getElementById("navbar");
 
 // Get the offset position of the navbar
-var sticky = navbar.offsetTop;
+let sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
@@ -36,14 +36,14 @@ function closeNav() {
   sidenav.classList.remove("active");
 }
 
-filterSelection("caterer");
+filterSelection("all");
 function filterSelection(c) {
   let x, i;
-  x = document.getElementsByClassName("filterDiv");
+  x = document.querySelectorAll(".filterDiv");
   if (c == "all") c == "";
   for (i = 0; i < x.length; i++) {
-    removeClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+    removeClass(x[i], "showFilteredElements");
+    if (x[i].className.indexOf(c) > -1) addClass(x[i], "showFilteredElements");
   }
 }
 // montrer les elements selectioner
@@ -68,24 +68,39 @@ function removeClass(element, name) {
   }
   element.className = arr1.join(" ");
 }
-// ajout de la classe "active" sur le bouton actuel choisi
-/* let buttonContainer = document.getElementById("button-container");
-let btns = buttonContainer.getElementsByClassName("btn");
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function () {
-    let current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", " ");
-    this.className += " active";
-  });
-}*/
+//ajout de la classe "active" sur le bouton actuel choisi
 
-let buttonContainer = document.getElementsByClassName("button-container");
-let btns = Array.from(buttonContainer[0].getElementsByClassName("btn"));
+let dropDownContainer = document.querySelector("#myDropdown");
 
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function () {
-    let current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace("active", "");
-    this.className += " active";
+let choiceSelection = dropDownContainer.querySelectorAll("a");
+
+choiceSelection.forEach(function (choice) {
+  choice.addEventListener("click", function () {
+    myDropDownMenu();
   });
+});
+
+let current = document.querySelectorAll(".active");
+current.forEach(function (element) {
+  element.className = element.className.replace("active", "");
+});
+
+function myDropDownMenu() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  let input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
 }
