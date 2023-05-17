@@ -106,7 +106,7 @@ nav {
     width: 100%;
   }
 .bakeryBlock{
-    /*display: flex; */
+    display: flex;
     margin-bottom: 16px;
     padding: 16px;
     flex-direction: column;
@@ -139,11 +139,12 @@ nav {
 }
 
 #advertising{
+  display: flex;
     align-items: center;
 }
 .filterDiv {
     display: none;
 }
 .show {
-    display: block;
+    display: flex;
 }
