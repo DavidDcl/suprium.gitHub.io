@@ -19,6 +19,92 @@ body{
 
 /*    font-family: 'Alex Brush', cursive; */
 
+
+nav {
+    background: linear-gradient( #FFD95A,#ffd95ab9,#FFD95A);
+    
+  }
+
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 .5rem;
+   
+    
+  }
+  nav ul li {
+    margin:1%;  
+  }
+  .burger-icon span {
+    display: flex;
+    width: 2.5em;
+    height: 0.6em;
+    margin: 0.3em 0;
+    background: linear-gradient(#4C3D3D,#4c3d3d86);
+    border: 2px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+
+  #logo {
+    width: 10%;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+  }
+  
+  /* Sidenav menu links */
+  .sidenav a {
+    /* padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181; */
+    display: block;
+    /* transition: 0.3s; */
+  }
+  
+  /* .sidenav a:hover {
+    color: #111;
+  }
+   */
+  /* .sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+   */
+  /* Active class */
+  .sidenav.active {
+    left: 0;
+  }
+  
+  /* Close btn */
+  .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 .bakeryBlock{
     /*display: flex; */
     margin-bottom: 16px;
