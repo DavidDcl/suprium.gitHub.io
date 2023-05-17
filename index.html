@@ -48,9 +48,11 @@
             <button class="btn" onclick="filterSelection('location')">Localisation</button>
         </div>
         <div class="container">Filtres</div>
+       
+        <div class="main">
 
         <!--Auguste & Ferdinand bakery-->
-        <div class="bakeryBlock filterDiv caterer onlineOrder price location">
+        <div class="bakeryBlock filterDiv caterer onlineOrder price location" id="popupAuguste">
             <img class="pictureBakery" src="Images/bakery-Auguste2.jpg" alt="Boulangerie Auguste & Ferdinand" />
             <div class="bakeryName" filter-caterer="Oui" filteronlineorder="Oui" filter-price="€"
                 filter-location="Petit Pain">
@@ -90,7 +92,16 @@
             <img class="pictureStars" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
         </div>
 
+         </div>
 
+        <!--Popup windows-->
+        <div id="popupBakery1">
+            <button id="close-btnAuguste">&times;</button>
+            <img class="pictureBakery-popup" src="Images/bakery-Auguste2.jpg" alt="Boulangerie Auguste & Ferdinand" />
+            <h2>Auguste & Ferdinand</h2>
+            <img class="pictureStars-popup" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusamus eaque fugit. Officia iste quam beatae vero. Delectus, exercitationem facere.</p>
+        </div>
 
 
         <script src="app.js"></script>

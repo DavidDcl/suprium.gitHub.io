@@ -8,13 +8,16 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
 body{
-    margin:0;
+    /* margin:0; */
     background-color: var(--primary-color);
     font-family: 'DM Sans', sans-serif;
     color: var(--dark);
+    height: 100%;
 }
 
 /*    font-family: 'Alex Brush', cursive; */
@@ -105,6 +108,8 @@ nav {
     top: 0;
     width: 100%;
   }
+
+
 .bakeryBlock{
     display: flex;
     margin-bottom: 16px;
@@ -114,7 +119,7 @@ nav {
 }
 
 .bakeryName{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 26px;
     padding-top: 16px;
@@ -152,3 +157,83 @@ nav {
 .show {
     display: flex;
 }
+
+/* Popup window Auguste properties*/
+/* #popupBakery1{
+    position:absolute;
+    ligne ci-dessous fait disparaitre la fenêtre du navigateur
+    top:-100%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 370px;
+    padding: 20px;
+    background: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1));
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.popupBakery1 h2{
+    font-size: 24px;
+} */
+
+#popupBakery1{
+    display: none;
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 370px;
+    padding: 20px;
+    background: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1));
+    margin-top: 22px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#close-btnAuguste{
+    position: absolute;
+    top: 5px;
+    right:10px;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    color: var(--dark);
+    border: none;
+    border-radius: 50%;
+    cursor:pointer;
+}
+
+/* Popup window generic properties*/
+.pictureBakery-popup{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 8px;
+}
+
+.pictureStars-popup{
+    text-align: center;
+    width: 160px;
+    height: 32px;
+    margin-bottom: 8px;
+}
+
+
+/*classes for the addEventListener click*/
+.bodyActivePopup {
+    overflow: hidden;
+    filter: blur(5px);
+    background: rgba(0, 0, 0, 0.08);
+}
+
+
+

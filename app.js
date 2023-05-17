@@ -89,3 +89,22 @@ for (let i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+//when the user click on Auguste picture
+const clickAuguste = document.querySelector("#popupAuguste");
+
+const popupAuguste = document.querySelector("#popupBakery1");
+
+const main = document.querySelector(".main");
+
+const closeButAuguste = document.querySelector("#close-btnAuguste");
+
+clickAuguste.addEventListener("click", function () {
+  popupAuguste.style.display = "flex";
+  main.classList.add("bodyActivePopup");
+});
+
+closeButAuguste.addEventListener("click", function () {
+  popupAuguste.style.display = "none";
+  main.classList.remove("bodyActivePopup");
+});
