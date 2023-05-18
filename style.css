@@ -1,7 +1,7 @@
 /* Creation of variables for the colors */
 :root {
     --primary-color: rgba(255, 247, 212, 1);
-    --primary-color:rgba(235, 227, 192, 1);
+    --primary-color-var:rgba(235, 227, 192, 1);
     --secondary-color:rgba(255, 217, 90, 1);
     --secondary-color-var:rgba(235, 197, 70, 1);
     --third-color: rgba(192, 127, 0, 1);
@@ -199,9 +199,11 @@ nav {
   padding: 14px 20px 12px 45px;
   border: none;
   border: 1px solid var(--dark-var);
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-var);
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
+  color: var(--dark-var);
+  
 }
 
 /* The search field when it gets focus/clicked on */
@@ -217,10 +219,11 @@ nav {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-var);
   min-width: 230px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--dark-var);
   z-index: 1;
+  margin-left: 5px;
 }
 
 /* Links inside the dropdown */
@@ -235,3 +238,12 @@ nav {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+.main-image {
+width: 100%
+}
+
+.main-image img {
+  height: 7em;
+  width: 100%;
+}
