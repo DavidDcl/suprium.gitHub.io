@@ -1,43 +1,17 @@
 ///////////////////// NAVBAR JS ///////////////////////////////////////
 
-// ajouter ou retirer la classe "show" de chaque element en fonction de ca selection ou pas
 const sidenav = document.getElementById("mySidenav");
 const openBtn = document.getElementById("openBtn");
-const closeBtn = document.getElementById("closeBtn");
-
-openBtn.onclick = openNav;
-closeBtn.onclick = closeNav;
-
-// When the user scrolls the page, execute myFunction
-window.onscroll = function () {
-  myFunction();
-};
-
-// Get the navbar
-let navbar = document.getElementById("navbar");
-
-// Get the offset position of the navbar
-let sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
+openBtn.onclick = closeOrOpenNav;
+function closeOrOpenNav() {
+  if (sidenav.classList.contains("active")) {
+    sidenav.classList.remove("active");
+    sidenav.classList.add("transitionOut");
   } else {
-    navbar.classList.remove("sticky");
+    sidenav.classList.add("active");
+    sidenav.classList.remove("transitionOut");
   }
 }
-
-/* Set the width of the side navigation to 250px */
-function openNav() {
-  sidenav.classList.add("active");
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  sidenav.classList.remove("active");
-}
-
 ///////////////////// NAVBAR JS ///////////////////////////////////////
 
 ///////////////////// DROPDONW AND FILTER JS ///////////////////////////////////////

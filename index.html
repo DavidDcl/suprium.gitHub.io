@@ -14,10 +14,8 @@
     </head>
 
     <body>
-
-
-        <nav id="navbar">
-            <ul class="content">
+        <nav class="sticky">
+            <ul >
                 <li><img id="logo" src="Images/Logo-Wild-Bakery.png"> </li>
                 <li href="#" id="openBtn">
                     <span class="burger-icon">
@@ -29,7 +27,6 @@
             </ul>
         </nav>
         <div id="mySidenav" class="sidenav">
-            <a id="closeBtn" href="#" class="close">&times;</a>
             <ul>
                 <li><a href="#">A propos de nous </a></li>
                 <li><a href="#">Commander</a></li>
@@ -37,8 +34,8 @@
                 <li><a href="#">Top 3</a></li>
             </ul>
         </div>
-
-        <div class="dropdown">
+        <!--Filtre-->
+        <div class="dropdown" >
             <button onclick="myDropDownMenu()" class="dropbtn">Recherchez</button>
             <div id="myDropdown" class="dropdown-content">
                 <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
