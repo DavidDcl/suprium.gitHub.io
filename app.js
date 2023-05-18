@@ -1,3 +1,5 @@
+///////////////////// NAVBAR JS ///////////////////////////////////////
+
 // ajouter ou retirer la classe "show" de chaque element en fonction de ca selection ou pas
 const sidenav = document.getElementById("mySidenav");
 const openBtn = document.getElementById("openBtn");
@@ -36,6 +38,9 @@ function closeNav() {
   sidenav.classList.remove("active");
 }
 
+///////////////////// NAVBAR JS ///////////////////////////////////////
+
+///////////////////// DROPDONW AND FILTER JS ///////////////////////////////////////
 filterSelection("all");
 function filterSelection(c) {
   let x, i;
@@ -104,3 +109,5 @@ function filterFunction() {
     }
   }
 }
+
+///////////////////// DROPDONW AND FILTER JS ///////////////////////////////////////

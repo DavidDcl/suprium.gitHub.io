@@ -171,17 +171,23 @@ nav {
 }
 
 .dropbtn {
-  background-color: #04AA6D;
-  color: white;
+  color: var(--dark-var);
+  margin-top: 10px;
+  margin-left: 5px;
+  background-color: var(--primary-color);
   padding: 16px;
   font-size: 16px;
-  border: none;
+  border: solid var(--dark-var);
   cursor: pointer;
+  border-width: 2px;
+  border-radius: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
 }
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #3e8e41;
+  background-color: var(--primary-color);
 }
 
 /* The search field */
@@ -192,11 +198,14 @@ nav {
   font-size: 16px;
   padding: 14px 20px 12px 45px;
   border: none;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid var(--dark-var);
+  background-color: var(--primary-color);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
 }
 
 /* The search field when it gets focus/clicked on */
-#myInput:focus {outline: 3px solid #ddd;}
+#myInput:focus {outline: 2px solid var(--dark-var);}
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -208,7 +217,7 @@ nav {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f6f6f6;
+  background-color: var(--primary-color);
   min-width: 230px;
   border: 1px solid #ddd;
   z-index: 1;
@@ -216,14 +225,13 @@ nav {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
+  color: var(--dark-var);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
