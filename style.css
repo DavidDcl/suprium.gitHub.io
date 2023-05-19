@@ -133,6 +133,7 @@ nav {
     max-width: 100%;
     max-height: 100vh;
     margin: auto;
+    padding-bottom: 32px;
 }
 
 .filterDiv {
@@ -147,7 +148,8 @@ nav {
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
-    width: 370px;
+    max-width: 370px;
+    width: 98%;
     padding: 20px;
     background: var(--primary-color);
     border-radius: 8px;
@@ -177,7 +179,8 @@ nav {
   top: 50%;
   left:50%;
   transform: translate(-50%, -50%);
-  width: 370px;
+  max-width: 370px;
+  width: 98%;  
   padding: 20px;
   background: var(--primary-color);
   border-radius: 8px;
@@ -207,7 +210,8 @@ nav {
   top: 50%;
   left:50%;
   transform: translate(-50%, -50%);
-  width: 370px;
+  max-width: 370px;
+  width: 98%;  
   padding: 20px;
   background: var(--primary-color);
   border-radius: 8px;
@@ -338,4 +342,14 @@ width: 100%
 .main-image img {
   height: 7em;
   width: 100%;
+}
+
+/*About Us section*/
+.aboutUs{
+  padding: 8px;
+  background-color: var(--secondary-color-var);
+}
+
+.aboutUs p {
+  padding: 8px;
 }
