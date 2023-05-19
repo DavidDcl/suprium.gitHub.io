@@ -34,8 +34,8 @@
                 <li><a href="#">Top 3</a></li>
             </ul>
         </div>
-        <!--Filtre-->
-        <div class="dropdown" >
+        <div class="main-image"><img src="Images/wheat-3241114.jpg" alt="image-ble"></div>
+        <div class="dropdown">
             <button onclick="myDropDownMenu()" class="dropbtn">Recherchez</button>
             <div id="myDropdown" class="dropdown-content">
                 <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
@@ -45,14 +45,15 @@
                 <a href="#contact" onclick="filterSelection('locationNord')">Localisation Petit Pain</a>
                 <a href="#contact" onclick="filterSelection('locationCentre')">Localisation Pain au chocolat</a>
                 <a href="#contact" onclick="filterSelection('locationSud')">Localisation Chocolatine</a>
-                <a href="#custom" onclick="filterSelection('priceCroissant')">Prix <i class="fa-solid fa-arrow-down">
+                <!-- <a href="#custom" onclick="filterSelection('priceCroissant')">Prix <i class="fa-solid fa-arrow-down">
                     </i></a>
                 <a href="#support" onclick="filterSelection('priceDecroissant')">Prix <i class="fa-solid fa-arrow-up">
-                    </i></a>
+                    </i></a> -->
             </div>
         </div>
         <!--Auguste & Ferdinand bakery-->
-        <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant locationNord all">
+        <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant locationNord all" id="popupAuguste">
+
             <img class="pictureBakery" src="Images/bakery-Auguste2.jpg" alt="Boulangerie Auguste & Ferdinand" />
             <div class="bakeryName">
                 <h2>Auguste & Ferdinand</h2>
@@ -61,7 +62,7 @@
         </div>
 
         <!--La Toque Cuivrée bakery-->
-        <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant locationSud all">
+        <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant locationSud all" id="popupToque">
             <img class="pictureBakery" src="Images/bakery-la-toque.jpg" alt="Boulangerie La Toque Cuivrée" />
             <div class="bakeryName">
                 <h2>Toque Cuivrée</h2>
@@ -72,7 +73,7 @@
 
 
         <!--Eric Kayser-->
-        <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant  locationCentre all">
+        <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant  locationCentre all" id="popupEric">
             <img class="pictureBakery" src="Images/bakery-X.jpg" alt="Boulangerie Eric Kayser" />
             <div class="bakeryName">
                 <h2>Eric Kayser</h2>
@@ -117,7 +118,32 @@
             <img id="advertising" src="Images/Pub.jpg" alt="Publicité pour Chocolatine-Clicker">
         </div>
 
+        </div>
 
+        <!--Popup windows-->
+        <div id="popupBakeryAuguste">
+            <button id="close-btnAuguste">&times;</button>
+            <img class="pictureBakery-popup" src="Images/bakery-Auguste2.jpg" alt="Boulangerie Auguste & Ferdinand" />
+            <h2>Auguste & Ferdinand</h2>
+            <img class="pictureStars-popup" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusamus eaque fugit. Officia iste quam beatae vero. Delectus, exercitationem facere.</p>
+        </div>
+
+        <div id="popupBakeryToque">
+            <button id="close-btnToque">&times;</button>
+            <img class="pictureBakery-popup" src="Images/bakery-la-toque.jpg" alt="Boulangerie La Toque Cuivrée" />
+            <h2>Toque Cuivrée</h2>
+            <img class="pictureStars-popup" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusamus eaque fugit. Officia iste quam beatae vero. Delectus, exercitationem facere.</p>
+        </div>
+
+        <div id="popupBakeryEric">
+            <button id="close-btnEric">&times;</button>
+            <img class="pictureBakery-popup" src="Images/bakery-X.jpg" alt="Boulangerie Eric Kayser" />
+            <h2>Eric Kayser</h2>
+            <img class="pictureStars-popup" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusamus eaque fugit. Officia iste quam beatae vero. Delectus, exercitationem facere.</p>
+        </div>
 
         <script src="app.js"></script>
     </body>

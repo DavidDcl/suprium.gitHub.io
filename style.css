@@ -105,7 +105,7 @@ nav {
 }
 
 .bakeryName{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 26px;
     padding-top: 16px;
@@ -120,9 +120,6 @@ nav {
     
 }
 
-.description{
-    display: none;
-}
 
 .pictureStars{
     text-align: center;
@@ -141,6 +138,124 @@ nav {
 .filterDiv {
     display: none;
 }
+
+/* Popup window Auguste properties*/
+
+#popupBakeryAuguste{
+    display: none;
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 370px;
+    padding: 20px;
+    background: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1));
+    margin-top: 22px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#close-btnAuguste{
+    position: absolute;
+    top: 5px;
+    right:10px;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    color: var(--dark);
+    border: none;
+    border-radius: 50%;
+    cursor:pointer;
+}
+
+/* Popup window Toque properties*/
+#popupBakeryToque{
+  display: none;
+  position:absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 370px;
+  padding: 20px;
+  background: var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1));
+  margin-top: 22px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#close-btnToque{
+  position: absolute;
+  top: 5px;
+  right:10px;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  color: var(--dark);
+  border: none;
+  border-radius: 50%;
+  cursor:pointer;
+}
+
+/* Popup window Eric properties*/
+#popupBakeryEric{
+  display: none;
+  position:absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 370px;
+  padding: 20px;
+  background: var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1));
+  margin-top: 22px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#close-btnEric{
+  position: absolute;
+  top: 5px;
+  right:10px;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  color: var(--dark);
+  border: none;
+  border-radius: 50%;
+  cursor:pointer;
+}
+
+
+/* Popup window generic properties*/
+.pictureBakery-popup{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 8px;
+}
+
+.pictureStars-popup{
+    text-align: center;
+    width: 160px;
+    height: 32px;
+    margin-bottom: 8px;
+}
+
+
+/*classes for the addEventListener click*/
+.bodyActivePopup {
+    overflow: hidden;
+    filter: blur(5px);
+    background: rgba(0, 0, 0, 0.08);
+}
+
+
 .showFilteredElements {
   display: flex;
 }
@@ -149,7 +264,7 @@ nav {
   color: var(--dark-var);
   margin-top: 10px;
   margin-left: 5px;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-var);
   padding: 16px;
   font-size: 16px;
   border: solid var(--dark-var);
@@ -158,11 +273,12 @@ nav {
   border-radius: 4px;
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
+
 }
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-var);
 }
 
 /* The search field */
@@ -174,9 +290,11 @@ nav {
   padding: 14px 20px 12px 45px;
   border: none;
   border: 1px solid var(--dark-var);
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-var);
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
+  color: var(--dark-var);
+  
 }
 
 /* The search field when it gets focus/clicked on */
@@ -192,10 +310,12 @@ nav {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-var);
   min-width: 230px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--dark-var);
   z-index: 1;
+  margin-left: 5px;
+  border-radius: 4px;
 }
 
 /* Links inside the dropdown */
@@ -210,3 +330,12 @@ nav {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+.main-image {
+width: 100%
+}
+
+.main-image img {
+  height: 7em;
+  width: 100%;
+}
