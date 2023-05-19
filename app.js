@@ -84,6 +84,10 @@ function filterFunction() {
   }
 }
 
+///////////////////// DROPDONW AND FILTER JS ///////////////////////////////////////
+
+///////////////////// Click pop up ////////////////////////////////////////////////
+
 //when the user click on Auguste picture
 const clickAuguste = document.querySelector("#popupAuguste");
 
@@ -136,3 +140,5 @@ closeButEric.addEventListener("click", function () {
   popupEric.style.display = "none";
   main.classList.remove("bodyActivePopup");
 });
+
+///////////////////// Click pop up ////////////////////////////////////////////////
