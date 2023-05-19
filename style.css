@@ -172,7 +172,7 @@ nav {
   color: var(--dark-var);
   margin-top: 10px;
   margin-left: 5px;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-var);
   padding: 16px;
   font-size: 16px;
   border: solid var(--dark-var);
@@ -181,11 +181,12 @@ nav {
   border-radius: 4px;
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
+
 }
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-var);
 }
 
 /* The search field */
@@ -222,6 +223,7 @@ nav {
   border: 1px solid var(--dark-var);
   z-index: 1;
   margin-left: 5px;
+  border-radius: 4px;
 }
 
 /* Links inside the dropdown */
