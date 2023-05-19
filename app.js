@@ -99,12 +99,14 @@ const closeButAuguste = document.querySelector("#close-btnAuguste");
 
 clickAuguste.addEventListener("click", function () {
   popupAuguste.style.display = "flex";
-  main.classList.add("bodyActivePopup");
+  main.classList.add("activePopup");
+  body.classList.add("bodyActivePopup");
 });
 
 closeButAuguste.addEventListener("click", function () {
   popupAuguste.style.display = "none";
-  main.classList.remove("bodyActivePopup");
+  main.classList.remove("activePopup");
+  body.classList.remove("bodyActivePopup");
 });
 
 //when the user click on Toque picture
@@ -116,12 +118,12 @@ const closeButToque = document.querySelector("#close-btnToque");
 
 clickToque.addEventListener("click", function () {
   popupToque.style.display = "flex";
-  main.classList.add("bodyActivePopup");
+  main.classList.add("activePopup");
 });
 
 closeButToque.addEventListener("click", function () {
   popupToque.style.display = "none";
-  main.classList.remove("bodyActivePopup");
+  main.classList.remove("activePopup");
 });
 
 //when the user click on Eric picture
@@ -133,12 +135,12 @@ const closeButEric = document.querySelector("#close-btnEric");
 
 clickEric.addEventListener("click", function () {
   popupEric.style.display = "flex";
-  main.classList.add("bodyActivePopup");
+  main.classList.add("activePopup");
 });
 
 closeButEric.addEventListener("click", function () {
   popupEric.style.display = "none";
-  main.classList.remove("bodyActivePopup");
+  main.classList.remove("activePopup");
 });
 
 ///////////////////// Click pop up ////////////////////////////////////////////////

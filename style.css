@@ -253,12 +253,15 @@ nav {
 
 
 /*classes for the addEventListener click*/
-.bodyActivePopup {
-    overflow: hidden;
+.activePopup {
+    /* overflow: hidden; */
     filter: blur(5px);
     background: rgba(0, 0, 0, 0.08);
 }
 
+.bodyActivePopup{
+  overflow: hidden;
+}
 
 .showFilteredElements {
   display: flex;
