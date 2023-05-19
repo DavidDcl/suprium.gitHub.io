@@ -148,9 +148,6 @@ nav {
     height: 210px;
 }
 
-.description{
-    display: none;
-}
 
 .pictureStars{
     text-align: center;
@@ -171,30 +168,8 @@ nav {
 }
 
 /* Popup window Auguste properties*/
-/* #popupBakery1{
-    position:absolute;
-    ligne ci-dessous fait disparaitre la fenêtre du navigateur
-    top:-100%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    width: 370px;
-    padding: 20px;
-    background: var(--primary-color);
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1));
-    margin-top: 22px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-
-
-.popupBakery1 h2{
-    font-size: 24px;
-} */
-
-#popupBakery1{
+#popupBakeryAuguste{
     display: none;
     position:absolute;
     top: 50%;
@@ -222,6 +197,67 @@ nav {
     border-radius: 50%;
     cursor:pointer;
 }
+
+/* Popup window Toque properties*/
+#popupBakeryToque{
+  display: none;
+  position:absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 370px;
+  padding: 20px;
+  background: var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1));
+  margin-top: 22px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#close-btnToque{
+  position: absolute;
+  top: 5px;
+  right:10px;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  color: var(--dark);
+  border: none;
+  border-radius: 50%;
+  cursor:pointer;
+}
+
+/* Popup window Eric properties*/
+#popupBakeryEric{
+  display: none;
+  position:absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 370px;
+  padding: 20px;
+  background: var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1));
+  margin-top: 22px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#close-btnEric{
+  position: absolute;
+  top: 5px;
+  right:10px;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  color: var(--dark);
+  border: none;
+  border-radius: 50%;
+  cursor:pointer;
+}
+
 
 /* Popup window generic properties*/
 .pictureBakery-popup{

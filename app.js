@@ -108,7 +108,7 @@ function filterFunction() {
 //when the user click on Auguste picture
 const clickAuguste = document.querySelector("#popupAuguste");
 
-const popupAuguste = document.querySelector("#popupBakery1");
+const popupAuguste = document.querySelector("#popupBakeryAuguste");
 
 const main = document.querySelector(".main");
 
@@ -121,5 +121,39 @@ clickAuguste.addEventListener("click", function () {
 
 closeButAuguste.addEventListener("click", function () {
   popupAuguste.style.display = "none";
+  main.classList.remove("bodyActivePopup");
+});
+
+//when the user click on Toque picture
+const clickToque = document.querySelector("#popupToque");
+
+const popupToque = document.querySelector("#popupBakeryToque");
+
+const closeButToque = document.querySelector("#close-btnToque");
+
+clickToque.addEventListener("click", function () {
+  popupToque.style.display = "flex";
+  main.classList.add("bodyActivePopup");
+});
+
+closeButToque.addEventListener("click", function () {
+  popupToque.style.display = "none";
+  main.classList.remove("bodyActivePopup");
+});
+
+//when the user click on Eric picture
+const clickEric = document.querySelector("#popupEric");
+
+const popupEric = document.querySelector("#popupBakeryEric");
+
+const closeButEric = document.querySelector("#close-btnEric");
+
+clickEric.addEventListener("click", function () {
+  popupEric.style.display = "flex";
+  main.classList.add("bodyActivePopup");
+});
+
+closeButEric.addEventListener("click", function () {
+  popupEric.style.display = "none";
   main.classList.remove("bodyActivePopup");
 });
