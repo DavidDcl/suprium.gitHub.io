@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="contact-us-style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=DM+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d75d8aa9da.js" crossorigin="anonymous"></script>
+        <title>The Wild Bakery</title>
+    </head>
+
+    <body class="toggle">
+        <header>
+            <nav class="sticky">
+                <ul>
+                    <li><img id="logo" src="Images/Logo-Wild-Bakery.png"> </li>
+                    <li href="#" id="openBtn">
+                        <span class="burger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+            <div id="mySidenav" class="sidenav">
+                <ul>
+                    <li><a href="#">A propos de nous </a></li>
+                    <li><a href="#">Commander</a></li>
+                    <li><a href="contact-us.html">Contactez-nous</a></li>
+                    <li><a href="top3.html">Top 3</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="main">
+
+            <div class="main-image"><img src="Images/wheat-3241114.jpg" alt="image-ble"></div>
+
+
+            <button><a href="index.html" class="backbutton">Back to Home</a></button>
+            <form>
+                <ul class="form-style-1">
+                    <li><label>Full Name <span class="required">*</span></label><input type="text" name="field1"
+                            class="field-divided" placeholder="First" /> <input type="text" name="field2"
+                            class="field-divided" placeholder="Last" /></li>
+                    <li>
+                        <label>Email <span class="required">*</span></label>
+                        <input type="email" name="field3" class="field-long" />
+                    </li>
+                    <li>
+                        <label>Subject</label>
+                        <select name="field4" class="field-select">
+                            <option value="Advertise">Advertise</option>
+                            <option value="Partnership">Partnership</option>
+                            <option value="General Question">General</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Your Message <span class="required">*</span></label>
+                        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+                    </li>
+                    <li>
+                        <input type="submit" value="Submit" />
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </body>
+
+</html>
