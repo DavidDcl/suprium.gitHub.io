@@ -30,6 +30,8 @@ body{
 nav {
     background: linear-gradient(var(--secondary-color)0%,var(--secondary-color-var)100%);  
     z-index: 2;
+    width: 100%;
+    /* height: 25%; */
   }
   .sticky {
     position: fixed;
@@ -40,7 +42,7 @@ nav {
     width: 23%;
     margin-top:0.2em;
   }
-  nav ul {
+  nav #mainMenu {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -67,6 +69,7 @@ nav {
     list-style-type: none;
   }
    .active {
+    display: block;
     transition: all 0.5s ease;
     z-index: 2;
     right: 0;
@@ -339,3 +342,42 @@ width: 100%
   height: 7em;
   width: 100%;
 }
+
+ @media screen and (min-width: 538px) { 
+ nav {
+    background: linear-gradient(var(--secondary-color)0%,var(--secondary-color-var)100%);  
+    z-index: 2;
+  }
+  .sticky {
+    position: fixed;
+    top: 0%;
+
+  }
+  #logo {
+    width: 11.5%;
+    margin-top:0.2em;
+  }
+  nav ul li {
+    list-style: none;
+    display: inline;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem;
+  }
+  nav ul li a {
+    color: var(--dark);
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6em; 
+    font-weight: bold;
+  }
+ 
+  .burger-icon span {
+    display: none;
+  }
+    .sidenav {
+    position:absolute ;
+     top:50%;
+    right: 35%; 
+    }
+ }
