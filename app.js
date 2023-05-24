@@ -88,12 +88,13 @@ function filterFunction() {
 
 ///////////////////// Click pop up ////////////////////////////////////////////////
 
+const main = document.querySelector(".main");
+const footer = document.querySelector("#bottom");
+
 //when the user click on Auguste picture
 const clickAuguste = document.querySelector("#popupAuguste");
 
 const popupAuguste = document.querySelector("#popupBakeryAuguste");
-
-const main = document.querySelector(".main");
 
 const closeButAuguste = document.querySelector("#close-btnAuguste");
 
@@ -103,12 +104,14 @@ clickAuguste.addEventListener("click", function () {
   popupAuguste.style.display = "flex";
   main.classList.add("activePopup");
   body.classList.add("bodyActivePopup");
+  footer.classList.add("activePopup");
 });
 
 closeButAuguste.addEventListener("click", function () {
   popupAuguste.style.display = "none";
   main.classList.remove("activePopup");
   body.classList.remove("bodyActivePopup");
+  footer.classList.remove("activePopup");
 });
 
 //when the user click on Toque picture
@@ -122,12 +125,14 @@ clickToque.addEventListener("click", function () {
   popupToque.style.display = "flex";
   main.classList.add("activePopup");
   body.classList.add("bodyActivePopup");
+  footer.classList.add("activePopup");
 });
 
 closeButToque.addEventListener("click", function () {
   popupToque.style.display = "none";
   main.classList.remove("activePopup");
   body.classList.remove("bodyActivePopup");
+  footer.classList.remove("activePopup");
 });
 
 //when the user click on Eric picture
@@ -141,12 +146,14 @@ clickEric.addEventListener("click", function () {
   popupEric.style.display = "flex";
   main.classList.add("activePopup");
   body.classList.add("bodyActivePopup");
+  footer.classList.add("activePopup");
 });
 
 closeButEric.addEventListener("click", function () {
   popupEric.style.display = "none";
   main.classList.remove("activePopup");
   body.classList.remove("bodyActivePopup");
+  footer.classList.remove("activePopup");
 });
 
 //when the user click on Louis picture
@@ -160,12 +167,14 @@ clickLouis.addEventListener("click", function () {
   popupLouis.style.display = "flex";
   main.classList.add("activePopup");
   body.classList.add("bodyActivePopup");
+  footer.classList.add("activePopup");
 });
 
 closeButLouis.addEventListener("click", function () {
   popupLouis.style.display = "none";
   main.classList.remove("activePopup");
   body.classList.remove("bodyActivePopup");
+  footer.classList.remove("activePopup");
 });
 
 //when the user click on Pain picture
@@ -179,12 +188,14 @@ clickPain.addEventListener("click", function () {
   popupPain.style.display = "flex";
   main.classList.add("activePopup");
   body.classList.add("bodyActivePopup");
+  footer.classList.add("activePopup");
 });
 
 closeButPain.addEventListener("click", function () {
   popupPain.style.display = "none";
   main.classList.remove("activePopup");
   body.classList.remove("bodyActivePopup");
+  footer.classList.remove("activePopup");
 });
 
 //when the user click on Boulanger picture
@@ -198,11 +209,13 @@ clickBoulanger.addEventListener("click", function () {
   popupBoulanger.style.display = "flex";
   main.classList.add("activePopup");
   body.classList.add("bodyActivePopup");
+  footer.classList.add("activePopup");
 });
 
 closeButBoulanger.addEventListener("click", function () {
   popupBoulanger.style.display = "none";
   main.classList.remove("activePopup");
   body.classList.remove("bodyActivePopup");
+  footer.classList.remove("activePopup");
 });
 ///////////////////// Click pop up ////////////////////////////////////////////////
