@@ -359,4 +359,13 @@ width: 100%
     right: 29%; 
     }
 
+    .main-image img {
+      object-fit: cover;
+      height: 11em;
+    }
+    /*.desktop {
+      display: grid;
+      grid-template-columns: 3fr;
+    }*/
   }
+  
