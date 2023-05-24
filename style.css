@@ -31,7 +31,6 @@ nav {
     background: linear-gradient(var(--secondary-color)0%,var(--secondary-color-var)100%);  
     z-index: 2;
     width: 100%;
-    /* height: 25%; */
   }
   .sticky {
     position: fixed;
@@ -78,6 +77,7 @@ nav {
     background: linear-gradient(45deg,var(--primary-color)0%,var(--primary-color-var)100%); 
     box-shadow: -10px 10px 50px 0px var(--dark);
     
+  
   }
   .transitionOut {
     transition: all 0.5s ease;
@@ -303,7 +303,7 @@ width: 100%
 
 /* Propriétés Media Queries */
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 1024px) {
   .main-responsive {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -322,31 +322,23 @@ width: 100%
   }
   
 
-  /* nav {
-    background: linear-gradient(var(--secondary-color)0%,var(--secondary-color-var)100%);  
-    z-index: 2;
-  } */
-  /* .sticky {
-    position: fixed;
-    top: 0%;
 
-  } */
   #logo {
     width: 11.5%;
-    /* margin-top:0.2em; */
+ 
   }
   nav ul li {
-    /* list-style: none; */
+  
     display: inline;
     justify-content: space-between;
     align-items: center;
-    padding: 0.6rem;
+    padding: 1rem;
   }
   nav ul li a {
     color: var(--dark);
     text-decoration: none;
     font-family: 'DM Sans', sans-serif;
-    font-size: 1em; 
+    font-size: 1.5em; 
     font-weight: bold;
   }
  
@@ -355,17 +347,14 @@ width: 100%
   }
     .sidenav {
     position:absolute ;
-     top:50%;
-    right: 29%; 
+     top:40%;
+    right: 35%; 
     }
 
     .main-image img {
       object-fit: cover;
       height: 11em;
     }
-    /*.desktop {
-      display: grid;
-      grid-template-columns: 3fr;
-    }*/
+  
   }
   
