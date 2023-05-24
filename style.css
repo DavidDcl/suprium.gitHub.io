@@ -303,7 +303,7 @@ width: 100%
 
 /* Propriétés Media Queries */
 
-@media screen and (min-width: 530px) {
+@media screen and (min-width: 601px) {
   .main-responsive {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -321,32 +321,32 @@ width: 100%
     padding-left: 8px;
   }
   
- 
-  nav {
+
+  /* nav {
     background: linear-gradient(var(--secondary-color)0%,var(--secondary-color-var)100%);  
     z-index: 2;
-  }
-  .sticky {
+  } */
+  /* .sticky {
     position: fixed;
     top: 0%;
 
-  }
+  } */
   #logo {
     width: 11.5%;
-    margin-top:0.2em;
+    /* margin-top:0.2em; */
   }
   nav ul li {
-    list-style: none;
+    /* list-style: none; */
     display: inline;
     justify-content: space-between;
     align-items: center;
-    padding: 0.2rem;
+    padding: 0.6rem;
   }
   nav ul li a {
     color: var(--dark);
     text-decoration: none;
     font-family: 'DM Sans', sans-serif;
-    font-size: 0.6em; 
+    font-size: 1em; 
     font-weight: bold;
   }
  
@@ -356,7 +356,7 @@ width: 100%
     .sidenav {
     position:absolute ;
      top:50%;
-    right: 35%; 
+    right: 29%; 
     }
 
   }
