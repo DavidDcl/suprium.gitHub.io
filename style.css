@@ -210,7 +210,7 @@ nav {
   color: var(--dark-var);
   margin-top: 10px;
   margin-left: 5px;
-  background-color: var(--primary-color-var);
+  background: linear-gradient(45deg,var(--primary-color)0%,var(--primary-color-var)100%);
   padding: 16px;
   font-size: 16px;
   border: solid var(--dark-var);
@@ -219,6 +219,7 @@ nav {
   border-radius: 4px;
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
+  width: 7em;
 
 }
 
@@ -236,7 +237,7 @@ nav {
   padding: 14px 20px 12px 45px;
   border: none;
   border: 1px solid var(--dark-var);
-  background-color: var(--primary-color-var);
+  background: linear-gradient(45deg,var(--primary-color)0%,var(--primary-color-var)100%);
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
   color: var(--dark-var);
@@ -256,7 +257,7 @@ nav {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--primary-color-var);
+  background: linear-gradient(45deg,var(--primary-color)0%,var(--primary-color-var)100%);
   min-width: 230px;
   border: 1px solid var(--dark-var);
   z-index: 1;
