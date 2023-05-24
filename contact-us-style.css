@@ -16,12 +16,16 @@
     padding: 0;
   }
  
+  html, body {
+    height: 100%;
+  }
 body{
     padding-top: 5em;
     margin:0;
     background-color: var(--primary-color);
     font-family: 'DM Sans', sans-serif;
     color: var(--dark);
+    
 }
 
 /*    font-family: 'Alex Brush', cursive; */
@@ -41,7 +45,7 @@ nav {
     width: 23%;
     margin-top:0.2em;
   }
-  nav ul {
+  nav #mainMenu {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -68,6 +72,7 @@ nav {
     list-style-type: none;
   }
    .active {
+    display: block;
     display: block;
     transition: all 0.5s ease;
     z-index: 2;
@@ -142,13 +147,13 @@ nav {
     display: none;
 }
 
-/* Popup window Auguste properties*/
+/* Popup window generic properties*/
 
-#popupBakeryAuguste{
+.popupWindow{
     display: none;
-    position:absolute;
-    top: 50%;
-    left:50%;
+    position: fixed;
+    top: 50vh;
+    left: 50%;
     transform: translate(-50%, -50%);
     max-width: 370px;
     width: 98%;
@@ -161,38 +166,7 @@ nav {
     align-items: center;
 }
 
-#close-btnAuguste{
-    position: absolute;
-    top: 5px;
-    right:10px;
-    width: 20px;
-    height: 20px;
-    background: var(--primary-color);
-    color: var(--dark);
-    border: none;
-    border-radius: 50%;
-    cursor:pointer;
-}
-
-/* Popup window Toque properties*/
-#popupBakeryToque{
-  display: none;
-  position:absolute;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  max-width: 370px;
-  width: 98%;  
-  padding: 20px;
-  background: var(--primary-color);
-  border-radius: 8px;
-  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1);
-  margin-top: 22px;
-  flex-direction: column;
-  align-items: center;
-}
-
-#close-btnToque{
+.close-btn{
   position: absolute;
   top: 5px;
   right:10px;
@@ -205,39 +179,6 @@ nav {
   cursor:pointer;
 }
 
-/* Popup window Eric properties*/
-#popupBakeryEric{
-  display: none;
-  position:absolute;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  max-width: 370px;
-  width: 98%;  
-  padding: 20px;
-  background: var(--primary-color);
-  border-radius: 8px;
-  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1);
-  margin-top: 22px;
-  flex-direction: column;
-  align-items: center;
-}
-
-#close-btnEric{
-  position: absolute;
-  top: 5px;
-  right:10px;
-  width: 20px;
-  height: 20px;
-  background: var(--primary-color);
-  color: var(--dark);
-  border: none;
-  border-radius: 50%;
-  cursor:pointer;
-}
-
-
-/* Popup window generic properties*/
 .pictureBakery-popup{
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 4px;
@@ -255,12 +196,15 @@ nav {
 
 
 /*classes for the addEventListener click*/
-.bodyActivePopup {
-    overflow: hidden;
+.activePopup {
+    /* overflow: hidden; */
     filter: blur(5px);
     background: rgba(0, 0, 0, 0.08);
 }
 
+.bodyActivePopup{
+  overflow: hidden;
+}
 
 .showFilteredElements {
   display: flex;
@@ -270,7 +214,7 @@ nav {
   color: var(--dark-var);
   margin-top: 10px;
   margin-left: 5px;
-  background-color: var(--primary-color-var);
+  background: linear-gradient(45deg,var(--primary-color)0%,var(--primary-color-var)100%);
   padding: 16px;
   font-size: 16px;
   border: solid var(--dark-var);
@@ -279,6 +223,7 @@ nav {
   border-radius: 4px;
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
+  width: 7em;
 
 }
 
@@ -296,7 +241,7 @@ nav {
   padding: 14px 20px 12px 45px;
   border: none;
   border: 1px solid var(--dark-var);
-  background-color: var(--primary-color-var);
+  background: linear-gradient(45deg,var(--primary-color)0%,var(--primary-color-var)100%);
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
   color: var(--dark-var);
@@ -316,7 +261,7 @@ nav {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--primary-color-var);
+  background: linear-gradient(45deg,var(--primary-color)0%,var(--primary-color-var)100%);
   min-width: 230px;
   border: 1px solid var(--dark-var);
   z-index: 1;
@@ -345,7 +290,6 @@ width: 100%
   height: 7em;
   width: 100%;
 }
-
 /*About Us section*/
 .aboutUs{
   padding: 8px;
@@ -354,6 +298,11 @@ width: 100%
 
 .aboutUs p {
   padding: 8px;
+}
+
+#copyright{
+  background-color: var(--secondary-color-var);
+  font-size: 12px;
 }
 
 .form-style {
@@ -415,14 +364,14 @@ select{
 .form-style .field-textarea{
 	height: 100px;
 }
-.form-style input[type=submit], .form-style-1 input[type=button]{
+.form-style input[type=submit], .form-style input[type=button]{
 	background: var(--secondary-color-var);
 	padding: 8px 15px 8px 15px;
 	border: solid 1px var(--dark-var);
 	color: var(--dark-var);
   border-radius: 5px;
 }
-.form-style input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+.form-style input[type=submit]:hover, .form-style input[type=button]:hover{
 	background: var(--dark-var);
 	box-shadow:none;
 	-moz-box-shadow:none;
@@ -438,12 +387,12 @@ select{
   
   }
   
-  .aboutUs{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 80px;
-  }
+footer {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+   width: 100%;
+}
   
   #copyright{
     padding-left: 8px;
@@ -451,14 +400,14 @@ select{
   
   #logo {
     width: 11.5%;
- 
+    margin-top:0.2em;
   }
   nav ul li {
-  
+    list-style: none;
     display: inline;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0.2rem;
   }
   nav ul li a {
     color: var(--dark);
@@ -481,6 +430,10 @@ select{
       object-fit: cover;
       height: 11em;
     }
-  
- 
+    .form-style {
+      font-size: 1.5em;
+    
+    }
+
   }
+  
