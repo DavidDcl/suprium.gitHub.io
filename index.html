@@ -46,13 +46,13 @@
                 <button onclick="myDropDownMenu()" class="dropbtn">Filtrer</button>
                 <div id="myDropdown" class="dropdown-content">
                     <input type="text" placeholder="Recherchez..." id="myInput" onkeyup="filterFunction()">
-                    <a href="#" class="active" onclick="filterSelection('all')">Reset</a>
                     <a href="#" onclick="filterSelection('caterer')">Traiteur</a>
                     <a href="#" onclick="filterSelection('onlineOrder')">Online Order</a>
                     <a href="#" onclick="filterSelection('locationNord')">Localisation Petit Pain</a>
                     <a href="#" onclick="filterSelection('locationCentre')">Localisation Pain au chocolat</a>
                     <a href="#" onclick="filterSelection('locationSud')">Localisation Chocolatine</a>
                 </div>
+                <button class="reset"><a href="#" class="active" onclick="filterSelection('all')">Reset</a></button>
             </div>
 
             <div class="main-responsive">
