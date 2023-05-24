@@ -303,7 +303,7 @@ width: 100%
 
 /* Propriétés Media Queries */
 
-@media screen and (min-width: 530px) {
+@media screen and (min-width: 601px) {
   .main-responsive {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -363,9 +363,9 @@ width: 100%
       object-fit: cover;
       height: 11em;
     }
-
-    .locationNord {
+    /*.desktop {
       display: grid;
-    }
+      grid-template-columns: 3fr;
+    }*/
   }
   
