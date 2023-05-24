@@ -17,7 +17,7 @@
         <header>
             <nav class="sticky">
                 <ul>
-                    <li><img id="logo" src="Images/Logo-Wild-Bakery.png"> </li>
+                    <li><a href="index.html"><img id="logo" src="Images/Logo-Wild-Bakery.png"></a></li>
                     <li href="#" id="openBtn">
                         <span class="burger-icon">
                             <span></span>
@@ -30,9 +30,8 @@
             <div id="mySidenav" class="sidenav">
                 <ul>
                     <li><a href="#">A propos de nous </a></li>
-                    <li><a href="#">Commander</a></li>
+
                     <li><a href="contact-us.html">Contactez-nous</a></li>
-                    <li><a href="top3.html">Top 3</a></li>
                 </ul>
             </div>
         </header>
@@ -40,10 +39,6 @@
         <div class="main">
 
             <div class="main-image"><img src="Images/wheat-3241114.jpg" alt="image-ble"></div>
-
-
-            <button><a href="index.html" class="backbutton">Back to Home</a></button>
-
 
             <!--Auguste & Ferdinand bakery-->
             <div class="bakeryBlock" id="popupAuguste">
@@ -75,9 +70,37 @@
                 <img class="pictureStars" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
             </div>
 
+            <!--Popup windows-->
+            <div id="popupBakeryAuguste">
+                <button id="close-btnAuguste">&times;</button>
+                <img class="pictureBakery-popup" src="Images/bakery-Auguste2.jpg"
+                    alt="Boulangerie Auguste & Ferdinand" />
+                <h2>Auguste & Ferdinand</h2>
+                <img class="pictureStars-popup" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusamus eaque fugit. Officia iste
+                    quam
+                    beatae vero. Delectus, exercitationem facere.</p>
+            </div>
 
+            <div id="popupBakeryToque">
+                <button id="close-btnToque">&times;</button>
+                <img class="pictureBakery-popup" src="Images/bakery-la-toque.jpg" alt="Boulangerie La Toque Cuivrée" />
+                <h2>Toque Cuivrée</h2>
+                <img class="pictureStars-popup" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusamus eaque fugit. Officia iste
+                    quam
+                    beatae vero. Delectus, exercitationem facere.</p>
+            </div>
 
-
+            <div id="popupBakeryEric">
+                <button id="close-btnEric">&times;</button>
+                <img class="pictureBakery-popup" src="Images/bakery-X.jpg" alt="Boulangerie Eric Kayser" />
+                <h2>Eric Kayser</h2>
+                <img class="pictureStars-popup" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusamus eaque fugit. Officia iste
+                    quam
+                    beatae vero. Delectus, exercitationem facere.</p>
+            </div>
             <!--Section A propos de nous-->
             <div class="aboutUs">
                 <h2>A propos de nous</h2>
@@ -88,35 +111,6 @@
 
 
         </div>
-
-        <!--Popup windows-->
-        <div id="popupBakeryAuguste">
-            <button id="close-btnAuguste">&times;</button>
-            <img class="pictureBakery-popup" src="Images/bakery-Auguste2.jpg" alt="Boulangerie Auguste & Ferdinand" />
-            <h2>Auguste & Ferdinand</h2>
-            <img class="pictureStars-popup" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusamus eaque fugit. Officia iste quam
-                beatae vero. Delectus, exercitationem facere.</p>
-        </div>
-
-        <div id="popupBakeryToque">
-            <button id="close-btnToque">&times;</button>
-            <img class="pictureBakery-popup" src="Images/bakery-la-toque.jpg" alt="Boulangerie La Toque Cuivrée" />
-            <h2>Toque Cuivrée</h2>
-            <img class="pictureStars-popup" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusamus eaque fugit. Officia iste quam
-                beatae vero. Delectus, exercitationem facere.</p>
-        </div>
-
-        <div id="popupBakeryEric">
-            <button id="close-btnEric">&times;</button>
-            <img class="pictureBakery-popup" src="Images/bakery-X.jpg" alt="Boulangerie Eric Kayser" />
-            <h2>Eric Kayser</h2>
-            <img class="pictureStars-popup" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusamus eaque fugit. Officia iste quam
-                beatae vero. Delectus, exercitationem facere.</p>
-        </div>
-
         <script src="appTop3.js"></script>
     </body>
 

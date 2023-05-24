@@ -359,4 +359,13 @@ width: 100%
     right: 35%; 
     }
 
+    .main-image img {
+      object-fit: cover;
+      height: 11em;
+    }
+
+    .locationNord {
+      display: grid;
+    }
   }
+  

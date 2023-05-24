@@ -353,19 +353,3 @@ width: 100%
 .aboutUs p {
   padding: 8px;
 }
-
-button {
-  margin-left: 5px;
-  border-radius: 5px;
-  border: 1px solid var(--dark-var);
-  background-color: var(--primary-color-var);
-  padding: 12px 16px;
-  display: block;
-
-}
-.backbutton {
-  text-decoration: none;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: bold;
-  color: var(--dark-var);
-}

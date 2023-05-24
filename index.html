@@ -13,11 +13,11 @@
         <title>The Wild Bakery</title>
     </head>
 
-    <body class="toggle">
+    <body>
         <header>
             <nav class="sticky">
                 <ul id="mainMenu">
-                    <li><img id="logo" src="Images/Logo-Wild-Bakery.png"> </li>
+                    <li><a href="index.html"><img id="logo" src="Images/Logo-Wild-Bakery.png"></a></li>
                     <li href="#" id="openBtn">
                         <span class="burger-icon">
                             <span></span>
@@ -26,15 +26,14 @@
                         </span>
                     </li>
                 </ul>
-            
-            <div id="mySidenav" class="sidenav">
-                <ul>
-                    <li><a href="#">A propos de nous </a></li>
-                    <li><a href="#">Commander</a></li>
-                    <li><a href="contact-us.html">Contactez-nous</a></li>
-                    <li><a href="top3.html">Top 3</a></li>
-                </ul>
-        </nav>
+
+                <div id="mySidenav" class="sidenav">
+                    <ul>
+                        <li><a href="#bottom">A propos de nous </a></li>
+                        <li><a href="contact-us.html">Contactez-nous</a></li>
+                        <li><a href="top3.html">Top 3</a></li>
+                    </ul>
+            </nav>
             </div>
         </header>
 
@@ -46,97 +45,91 @@
                 <button onclick="myDropDownMenu()" class="dropbtn">Recherchez</button>
                 <div id="myDropdown" class="dropdown-content">
                     <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-                    <a href="#about" class="active" onclick="filterSelection('all')">Reset</a>
-                    <a href="#base" onclick="filterSelection('caterer')">Traiteur</a>
-                    <a href="#blog" onclick="filterSelection('onlineOrder')">Online Order</a>
-                    <a href="#contact" onclick="filterSelection('locationNord')">Localisation Petit Pain</a>
-                    <a href="#contact" onclick="filterSelection('locationCentre')">Localisation Pain au chocolat</a>
-                    <a href="#contact" onclick="filterSelection('locationSud')">Localisation Chocolatine</a>
-                    <!-- <a href="#custom" onclick="filterSelection('priceCroissant')">Prix <i class="fa-solid fa-arrow-down">
-                    </i></a>
-                <a href="#support" onclick="filterSelection('priceDecroissant')">Prix <i class="fa-solid fa-arrow-up">
-                    </i></a> -->
+                    <a href="#" class="active" onclick="filterSelection('all')">Reset</a>
+                    <a href="#" onclick="filterSelection('caterer')">Traiteur</a>
+                    <a href="#" onclick="filterSelection('onlineOrder')">Online Order</a>
+                    <a href="#" onclick="filterSelection('locationNord')">Localisation Petit Pain</a>
+                    <a href="#" onclick="filterSelection('locationCentre')">Localisation Pain au chocolat</a>
+                    <a href="#" onclick="filterSelection('locationSud')">Localisation Chocolatine</a>
                 </div>
             </div>
 
-        <div class="main-responsive">
+            <div class="main-responsive">
 
-            <!--Auguste & Ferdinand bakery-->
-            <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant locationNord all" id="popupAuguste">
+                <!--Auguste & Ferdinand bakery-->
+                <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant locationNord all"
+                    id="popupAuguste">
 
-                <img class="pictureBakery" src="Images/bakery-Auguste2.jpg" alt="Boulangerie Auguste & Ferdinand" />
-                <div class="bakeryName">
-                    <h2>Auguste & Ferdinand</h2>
+                    <img class="pictureBakery" src="Images/bakery-Auguste2.jpg" alt="Boulangerie Auguste & Ferdinand" />
+                    <div class="bakeryName">
+                        <h2>Auguste & Ferdinand</h2>
+                    </div>
+                    <img class="pictureStars" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
                 </div>
-                <img class="pictureStars" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
+
+                <!--La Toque Cuivrée bakery-->
+                <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant locationSud all" id="popupToque">
+                    <img class="pictureBakery" src="Images/bakery-la-toque.jpg" alt="Boulangerie La Toque Cuivrée" />
+                    <div class="bakeryName">
+                        <h2>Toque Cuivrée</h2>
+                    </div>
+                    <img class="pictureStars" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
+                </div>
+
+                <!--Eric Kayser-->
+                <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant  locationCentre all"
+                    id="popupEric">
+                    <img class="pictureBakery" src="Images/bakery-X.jpg" alt="Boulangerie Eric Kayser" />
+                    <div class="bakeryName">
+                        <h2>Eric Kayser</h2>
+                    </div>
+                    <img class="pictureStars" src="Images/Quatre_etoiles_pleines.png" alt="Notation 5 étoiles">
+                </div>
+
+
+                <!--Au P'tit Louis-->
+                <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant  locationNord all">
+                    <img class="pictureBakery" src="Images/boulangerie_petit_louis.jpg"
+                        alt="Boulangerie Au P'tit Louis" />
+                    <div class="bakeryName">
+                        <h2>Au P'tit Louis</h2>
+                    </div>
+                    <img class="pictureStars" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
+                </div>
+
+                <!--Pain Pain-->
+                <div class="bakeryBlock filterDiv caterer  priceCroissant  locationCentre all">
+                    <img class="pictureBakery" src="Images/pain_pain.jpg" alt="Boulangerie Pain Pain" />
+                    <div class="bakeryName">
+                        <h2>Pain Pain</h2>
+                    </div>
+                    <div class="description">
+                    </div>
+                    <img class="pictureStars" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
+                </div>
+                <!--Chez Le Boulanger-->
+                <div class="bakeryBlock filterDiv   priceCroissant  locationSud all">
+                    <img class="pictureBakery" src="Images/Chez_Le_Boulanger.png" alt="Boulangerie Au P'tit Louis" />
+                    <div class="bakeryName">
+                        <h2>Chez Le Boulanger</h2>
+                    </div>
+                    <img class="pictureStars" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
+                </div>
+
+                <!--fermeture de la div main-responsive-->
             </div>
 
-            <!--La Toque Cuivrée bakery-->
-            <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant locationSud all" id="popupToque">
-                <img class="pictureBakery" src="Images/bakery-la-toque.jpg" alt="Boulangerie La Toque Cuivrée" />
-                <div class="bakeryName">
-                    <h2>Toque Cuivrée</h2>
-                </div>
-                <img class="pictureStars" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
-            </div>
-
-            <!--Eric Kayser-->
-            <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant  locationCentre all" id="popupEric">
-                <img class="pictureBakery" src="Images/bakery-X.jpg" alt="Boulangerie Eric Kayser" />
-                <div class="bakeryName">
-                    <h2>Eric Kayser</h2>
-                </div>
-                <img class="pictureStars" src="Images/Quatre_etoiles_pleines.png" alt="Notation 5 étoiles">
+            <!--Publicité-->
+            <div>
+                <img id="advertising" src="Images/Pub.jpg" alt="Publicité pour Chocolatine-Clicker">
             </div>
 
 
-            <!--Au P'tit Louis-->
-            <div class="bakeryBlock filterDiv caterer onlineOrder priceCroissant  locationNord all">
-                <img class="pictureBakery" src="Images/boulangerie_petit_louis.jpg" alt="Boulangerie Au P'tit Louis" />
-                <div class="bakeryName">
-                    <h2>Au P'tit Louis</h2>
-                </div>
-                <img class="pictureStars" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
-            </div>
 
-            <!--Pain Pain-->
-            <div class="bakeryBlock filterDiv caterer  priceCroissant  locationCentre all">
-                <img class="pictureBakery" src="Images/pain_pain.jpg" alt="Boulangerie Pain Pain" />
-                <div class="bakeryName">
-                    <h2>Pain Pain</h2>
-                </div>
-                <div class="description">
-                </div>
-                <img class="pictureStars" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
-            </div>
-            <!--Chez Le Boulanger-->
-            <div class="bakeryBlock filterDiv   priceCroissant  locationSud all">
-                <img class="pictureBakery" src="Images/Chez_Le_Boulanger.png" alt="Boulangerie Au P'tit Louis" />
-                <div class="bakeryName">
-                    <h2>Chez Le Boulanger</h2>
-                </div>
-                <img class="pictureStars" src="Images/Cinq_etoiles_pleines.png" alt="Notation 5 étoiles">
-            </div>
-
-        <!--fermeture de la div main-responsive-->
-        </div>
-
-        <!--Publicité-->
-        <div>
-            <img id="advertising" src="Images/Pub.jpg" alt="Publicité pour Chocolatine-Clicker">
-        </div>
+            <!--Section A propos de nous-->
 
 
 
-        <!--Section A propos de nous-->
-        <div class="aboutUs">
-            <h2>A propos de nous</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae corrupti vel sed molestias? Praesentium repellendus est eligendi ratione sequi. Soluta!</p>
-        </div>
-        
-        <div id="copyright">
-            <p>&copy2023 La Wild Bakery</p>
-        </div>
 
 
         </div>
@@ -168,7 +161,14 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusamus eaque fugit. Officia iste quam
                 beatae vero. Delectus, exercitationem facere.</p>
         </div>
-
+        <footer class="aboutUs" id="bottom">
+            <h2>A propos de nous</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae corrupti vel sed molestias?
+                Praesentium repellendus est eligendi ratione sequi. Soluta!</p>
+            <div id="copyright">
+                <p>&copy2023 La Wild Bakery</p>
+            </div>
+        </footer>
         <script src="app.js"></script>
     </body>
 
