@@ -335,7 +335,12 @@ button a {
     margin: auto;
     max-width: 1200px;
   }
-  
+  footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
   .bakeryBlock{
     width : 360px;
   }
@@ -345,7 +350,8 @@ button a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 80px;
+    width: 100%;
+    padding-left: 40px;
   }
   
   #copyright{
