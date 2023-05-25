@@ -399,8 +399,8 @@ footer {
   }
   
   #logo {
-    width: 11.5%;
-    margin-top:0.2em;
+    width: 7%;
+ 
   }
   nav ul li {
     list-style: none;
@@ -420,10 +420,10 @@ footer {
   .burger-icon span {
     display: none;
   }
-    .sidenav {
+  .sidenav {
     position:absolute ;
-     top:30%;
-    right: 35%; 
+     top:70%;
+    right: 3%; 
     }
 
     .main-image img {
@@ -434,6 +434,8 @@ footer {
       font-size: 1.5em;
     
     }
-
+    body{
+      padding-top: 8em; 
+     }
   }
   

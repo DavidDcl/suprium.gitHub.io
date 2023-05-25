@@ -17,6 +17,27 @@ document.addEventListener("click", (a) => {
     sidenav.classList.remove("active");
     sidenav.classList.add("transitionOut");
   }
+  //   if (
+  //     a.target.matches("#close-btnBoulanger") ||
+  //     (!a.target.closest("#popupBakeryBoulanger") &&
+  //       !a.target.closest("#popupBoulanger"))
+  //   ) {
+  //     alert("alors");
+  //     popupBoulanger.style.display = "none";
+  //     main.classList.remove("activePopup");
+  //     body.classList.remove("bodyActivePopup");
+  //     footer.classList.remove("activePopup");
+  //   }
+  //   if (
+  //     a.target.matches("#close-btnPain") ||
+  //     (!a.target.closest("#popupBakeryPain") && !a.target.closest("#popupPain"))
+  //   ) {
+  //     alert("alors2");
+  //     popupPain.style.display = "none";
+  //     main.classList.remove("activePopup");
+  //     body.classList.remove("bodyActivePopup");
+  //     footer.classList.remove("activePopup");
+  //   }
 });
 //////////////////// NAVBAR JS ///////////////////////////////////////
 
@@ -224,4 +245,10 @@ closeButBoulanger.addEventListener("click", function () {
   body.classList.remove("bodyActivePopup");
   footer.classList.remove("activePopup");
 });
+
 ///////////////////// Click pop up ////////////////////////////////////////////////
+openBtn.addEventListener("click", () => {
+  sidenav.classList.add("active");
+  if (sidenav.classList.contains("transitionOut"))
+    sidenav.classList.remove("transitionOut");
+});
