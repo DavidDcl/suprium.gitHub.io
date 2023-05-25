@@ -361,7 +361,7 @@ button a {
 
 
   #logo {
-    width: 11.5%;
+    width: 7%;
  
   }
   nav ul li {
@@ -384,14 +384,16 @@ button a {
   }
     .sidenav {
     position:absolute ;
-     top:40%;
-    right: 35%; 
+     top:70%;
+    right: 3%; 
     }
 
     .main-image img {
       object-fit: cover;
       height: 11em;
     }
-  
+  body{
+   padding-top: 9.5em; 
+  }
   }
   

@@ -222,3 +222,8 @@ closeButBoulanger.addEventListener("click", function () {
   footer.classList.remove("activePopup")
 })
 ///////////////////// Click pop up ////////////////////////////////////////////////
+openBtn.addEventListener("click", () => {
+  sidenav.classList.add("active")
+  if (sidenav.classList.contains("transitionOut"))
+    sidenav.classList.remove("transitionOut")
+})
