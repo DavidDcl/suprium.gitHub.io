@@ -5,6 +5,7 @@ const openBtn = document.getElementById("openBtn");
 const navig = document.getElementsByClassName("sidenav");
 const burgerIcon = document.getElementsByClassName("burger-icon");
 openBtn.addEventListener("click", () => {
+  // quand on click sur le burger-menu
   sidenav.classList.add("active");
   if (sidenav.classList.contains("transitionOut"))
     sidenav.classList.remove("transitionOut");
