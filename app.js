@@ -11,34 +11,14 @@ openBtn.addEventListener("click", () => {
     sidenav.classList.remove("transitionOut");
 });
 document.addEventListener("click", (a) => {
+  // quand on click n'importe ou sur l ecran
   if (
-    !a.target.closest(".burger-icon") &&
+    !a.target.closest(".burger-icon") && // on précise  tout sauf burger icon
     sidenav.classList.contains("active")
   ) {
     sidenav.classList.remove("active");
     sidenav.classList.add("transitionOut");
   }
-  //   if (
-  //     a.target.matches("#close-btnBoulanger") ||
-  //     (!a.target.closest("#popupBakeryBoulanger") &&
-  //       !a.target.closest("#popupBoulanger"))
-  //   ) {
-  //     alert("alors");
-  //     popupBoulanger.style.display = "none";
-  //     main.classList.remove("activePopup");
-  //     body.classList.remove("bodyActivePopup");
-  //     footer.classList.remove("activePopup");
-  //   }
-  //   if (
-  //     a.target.matches("#close-btnPain") ||
-  //     (!a.target.closest("#popupBakeryPain") && !a.target.closest("#popupPain"))
-  //   ) {
-  //     alert("alors2");
-  //     popupPain.style.display = "none";
-  //     main.classList.remove("activePopup");
-  //     body.classList.remove("bodyActivePopup");
-  //     footer.classList.remove("activePopup");
-  //   }
 });
 //////////////////// NAVBAR JS ///////////////////////////////////////
 
@@ -53,7 +33,9 @@ function filterSelection(c) {
     if (x[i].className.indexOf(c) > -1) addClass(x[i], "showFilteredElements");
   }
 }
+
 // montrer les elements selectioner
+
 function addClass(element, name) {
   let i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -86,12 +68,7 @@ choiceSelection.forEach(function (choice) {
     myDropDownMenu();
   });
 });
-
-let current = document.querySelectorAll(".active");
-current.forEach(function (element) {
-  element.className = element.className.replace("active", "");
-});
-
+// cache/montre le contenu du drop down menu
 function myDropDownMenu() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -246,7 +223,6 @@ closeButBoulanger.addEventListener("click", function () {
   body.classList.remove("bodyActivePopup");
   footer.classList.remove("activePopup");
 });
-
 ///////////////////// Click pop up ////////////////////////////////////////////////
 openBtn.addEventListener("click", () => {
   sidenav.classList.add("active");
