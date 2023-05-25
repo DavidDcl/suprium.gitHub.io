@@ -325,45 +325,17 @@ button a {
   font-family: 'DM Sans', sans-serif;
 }
 /* Propriétés Media Queries */
-
-@media screen and (min-width: 1024px) {
-  .main-responsive {
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr); */
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    flex-wrap: wrap;
-    margin: auto;
-    max-width: 1200px;
+@media screen and (min-width: 481px) {
+  #logo {
+    width: 15%;
+ 
   }
-  footer {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
 }
 
-  .bakeryBlock{
-    width : 360px;
-  }
-
-
-  .aboutUs{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    padding-left: 40px;
-  }
-  
-  #copyright{
-    padding-left: 8px;
-  }
-  
-
-
+@media screen and (min-width: 768px) {
+    
   #logo {
-    width: 7%;
+    width: 15%;
  
   }
   nav ul li {
@@ -397,5 +369,50 @@ button a {
   body{
    padding-top: 9.5em; 
   }
+  .active{
+    display:none;
+  }
+  }
+
+@media screen and (min-width: 1024px) {
+  .main-responsive {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 1200px;
+  }
+  footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+  .bakeryBlock{
+    width : 360px;
+  }
+
+
+  .aboutUs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 40px;
   }
   
+  #copyright{
+    padding-left: 8px;
+  }
+  
+  #logo {
+    width: 11%;
+ 
+  }
+  }
+  
+  
+
+
+  
+

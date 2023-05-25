@@ -20,6 +20,15 @@ document.addEventListener("click", (a) => {
     sidenav.classList.add("transitionOut");
   }
 });
+
+function removeActive(x) {
+  if (x.matches) {
+    sidenav.classList.remove("active");
+  }
+}
+const x = window.matchMedia("(min-width: 768px)");
+removeActive(x);
+x.addListener(removeActive);
 //////////////////// NAVBAR JS ///////////////////////////////////////
 
 ///////////////////// DROPDONW AND FILTER JS ///////////////////////////////////////
