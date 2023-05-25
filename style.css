@@ -1,0 +1,418 @@
+/* Creation of variables for the colors */
+:root {
+    --primary-color: rgba(255, 247, 212, 1);
+    --primary-color-var:rgb(251, 230, 145);
+    --secondary-color:rgb(253, 205, 47);
+    --secondary-color-var:rgb(252, 221, 117);
+    --third-color: rgba(192, 127, 0, 1);
+    --third-color-var:rgba(152, 87, 0, 1);
+    --dark: rgba(76, 61, 61, 1);
+    --dark-var : rgb(138, 110, 110);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+ 
+body{
+    padding-top: 5em;
+    margin:0;
+    background-color: var(--primary-color);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
+}
+
+/*    font-family: 'Alex Brush', cursive; */
+
+
+nav {
+    background: linear-gradient(var(--secondary-color)0%,var(--secondary-color-var)100%);  
+    z-index: 2;
+    width: 100%;
+  }
+  .sticky {
+    position: fixed;
+    top: 0%;
+
+  }
+  #logo {
+    width: 23%;
+    margin-top:0.2em;
+  }
+  nav #mainMenu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem;
+  }
+ 
+  .burger-icon span {
+    display: flex;
+    width: 2.5em;
+    height: 0.6em;
+    margin: 0.2em;
+    background: linear-gradient(var(--dark),var(--dark-var),var(--dark)); 
+    border: 1px solid black;
+    border-radius: 30px;
+  }
+   .sidenav {
+    position: fixed;
+    top: 0; 
+    right: -20em;
+    transition: left 3s ease;
+  }
+  .sidenav ul {
+    list-style-type: none;
+  }
+  
+   .active {
+    display: block;
+    transition: all 0.5s ease;
+    z-index: 2;
+    right: 0;
+    top:5.3em;
+    border: 0.1px solid var(--dark-var);
+    background: linear-gradient(45deg,var(--primary-color)0%,var(--primary-color-var)100%); 
+    box-shadow: -10px 10px 50px 0px var(--dark);
+    
+  
+  }
+  .transitionOut {
+    transition: all 0.5s ease;
+    z-index: 2;
+    right: -20em;
+    top:5.3em;
+    border: 0.1px solid var(--dark-var);
+    background: linear-gradient(45deg,var(--primary-color),var(--primary-color-var)); 
+    box-shadow: -10px 10px 50px 0px var(--dark);
+  }
+.active a, .transitionOut a {
+  color: var(--dark);
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+ 
+.bakeryBlock{
+    display: flex;
+    margin-bottom: 16px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bakeryName{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    padding-top: 16px;
+    padding-bottom: 8px;
+}
+
+.pictureBakery{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    width: 210px;
+    height: 210px;
+    
+}
+
+
+.pictureStars{
+    text-align: center;
+    width: 160px;
+    height: 32px;
+}
+
+#advertising{
+    display: grid;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+    padding-bottom: 32px;
+}
+
+.filterDiv {
+    display: none;
+}
+
+/* Popup window generic properties*/
+
+.popupWindow{
+    display: none;
+    position: fixed;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 370px;
+    width: 98%;
+    padding: 20px;
+    background: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 22px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-btn{
+  position: absolute;
+  top: 5px;
+  right:10px;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  color: var(--dark);
+  border: none;
+  border-radius: 50%;
+  cursor:pointer;
+}
+
+.pictureBakery-popup{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 8px;
+}
+
+.pictureStars-popup{
+    text-align: center;
+    width: 160px;
+    height: 32px;
+    margin-bottom: 8px;
+}
+
+
+/*classes for the addEventListener click*/
+.activePopup {
+    /* overflow: hidden; */
+    filter: blur(5px);
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.bodyActivePopup{
+  overflow: hidden;
+}
+
+.showFilteredElements {
+  display: flex;
+}
+
+.dropbtn {
+  color: var(--dark-var);
+  margin-top: 10px;
+  margin-left: 5px;
+  background: linear-gradient(45deg,var(--primary-color)0%,var(--primary-color-var)100%);
+  padding: 16px;
+  font-size: 16px;
+  border: solid var(--dark-var);
+  cursor: pointer;
+  border-width: 2px;
+  border-radius: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  width: 7em;
+
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: var(--primary-color-var);
+}
+
+/* The search field */
+#myInput {
+  box-sizing: border-box;
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border: 1px solid var(--dark-var);
+  background: linear-gradient(45deg,var(--primary-color)0%,var(--primary-color-var)100%);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  color: var(--dark-var);
+  
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput:focus {outline: 2px solid var(--dark-var);}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: linear-gradient(45deg,var(--primary-color)0%,var(--primary-color-var)100%);
+  min-width: 230px;
+  border: 1px solid var(--dark-var);
+  z-index: 1;
+  margin-left: 5px;
+  border-radius: 4px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: var(--dark-var);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.main-image {
+width: 100%
+}
+
+.main-image img {
+  height: 7em;
+  width: 100%;
+}
+/*About Us section*/
+.aboutUs{
+  padding: 8px;
+  background-color: var(--secondary-color-var);
+  top:0%;
+}
+
+.aboutUs p {
+  padding: 8px;
+}
+
+#copyright{
+  background-color: var(--secondary-color-var);
+  font-size: 12px;
+}
+
+.reset {
+  color: var(--dark-var);
+    margin-top: 10px;
+    margin-left: 5px;
+    background: linear-gradient(45deg,var(--primary-color)0%,var(--primary-color-var)100%);
+    padding: 16px;
+    font-size: 16px;
+    border: solid var(--dark-var);
+    cursor: pointer;
+    border-width: 2px;
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    width: 7em;
+}
+button a {
+  text-decoration: none;
+  color: var(--dark-var);
+  font-family: 'DM Sans', sans-serif;
+}
+/* Propriétés Media Queries */
+@media screen and (min-width: 481px) {
+  #logo {
+    width: 15%;
+ 
+  }
+}
+
+@media screen and (min-width: 768px) {
+    
+  #logo {
+    width: 15%;
+ 
+  }
+  nav ul li {
+  
+    display: inline;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  nav ul li a {
+    color: var(--dark);
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5em; 
+    font-weight: bold;
+  }
+ 
+  .burger-icon span {
+    display: none;
+  }
+    .sidenav {
+    position:absolute ;
+     top:70%;
+    right: 3%; 
+    }
+
+    .main-image img {
+      object-fit: cover;
+      height: 11em;
+    }
+  body{
+   padding-top: 9.5em; 
+  }
+  .active{
+    display:none;
+  }
+  }
+
+@media screen and (min-width: 1024px) {
+  .main-responsive {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 1200px;
+  }
+  footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+  .bakeryBlock{
+    width : 360px;
+  }
+
+
+  .aboutUs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 40px;
+  }
+  
+  #copyright{
+    padding-left: 8px;
+  }
+  
+  #logo {
+    width: 11%;
+ 
+  }
+  }
+  
+  
+
+
+  
+
